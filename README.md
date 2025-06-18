@@ -14,10 +14,15 @@ This project uses computer vision and deep learning to identify and classify sym
 Place labeled images in `data/circuit_symbols/` like this:
 
 circuit_symbols/
+
 ├── resistor/
+
 ├── capacitor/
+
 ├── inductor/
+
 ├── diode/
+
 └── switch/
 
 
@@ -26,10 +31,22 @@ circuit_symbols/
 ```bash
 python src/train_cnn.py
 python src/train_svm.py
+```
 
+## 📊 Evaluate
 
-📊 Evaluate
-
+```bash
 python src/evaluate.py
+```
 
-⚙️ Predict a New Symbol
+## ⚙️ Predict a New Symbol
+
+```bash
+python app/predict_symbol.py --img_path sample.png
+```
+
+## 📈 Results
+
+- Accuracy: CNN: 96.8%, SVM: 94.2%
+
+- See results in results/ folder.
